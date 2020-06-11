@@ -292,7 +292,7 @@ h1 {
 }
 
 /* Адаптивность под iPad pro */
-@media screen and (max-width: 1024px) {
+@media screen and (width: 1024px) {
 	.container {
 		width: 970px;
 		padding-top: 60px;
@@ -356,7 +356,7 @@ h1 {
 }
 
 /* Адаптивность под iPhone X */
-@media screen and (max-width: 375px) {
+@media screen and (width: 375px) {
 	.container {
 		width: 100%;
 	}
