@@ -28,7 +28,10 @@
 // Задание 4
 
 // let age = prompt("Введите совй возраст");
-// if (90 >= age && age >= 14) {
+
+// if (isNaN(age)) {
+// 	alert("Вы ввели не число");
+// }	else if (90 >= age && age >= 14) {
 // 	alert("Мы вас берем");
 // }	else if (age > 90) {
 // 	alert("Вы слишком старый");
@@ -51,12 +54,19 @@
 // let a = prompt("Введите число");
 // let b = prompt("Введите еще одно число");
 // function min(a, b) {
+// 	if (isNaN(a) || isNaN(b)) {
+// 		alert("Вы ввели не число");		
+// 	}	else {
+// 		a = Number(a);
+// 		b = Number(b);
+// 	}
 // 	if (a > b) {
 // 		return b;		
 // 	}	else {
-// 		return a;
+// 			return a;
 // 	}
 // }
+
 // alert(`Меньшее число ${min(a, b)}`);
 
 
@@ -65,6 +75,11 @@
 let x = prompt("Введите число, которое нужно возвести в степень");
 let n = prompt("Введите число, которое будет являться степенью");
 function row(x, n) {
-	return x**n;
+	if (isNaN(x) || isNaN(n)) {
+		alert("Вы ввели не число");		
+	}	else {
+			return x**n;
+	}			
 }
+
 alert(`${x} в степени ${n} даст ${row(x, n)}`);
