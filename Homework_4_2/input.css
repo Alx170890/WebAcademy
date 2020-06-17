@@ -1,0 +1,131 @@
+body {
+	font: Arial, sans-serif;
+	font-size: 14px;	
+}
+
+.container {	
+	width: 160px;
+	margin: 0 auto;
+	position: relative;
+}
+/*Создание формы*/
+input {
+	height: 40px;
+	width: 150px;
+	border: 1px solid #a5a5a5;
+	border-radius: 3px;	
+}
+
+input:hover {
+	border-color: #000;	
+	outline: none;
+}
+
+input:focus {	
+	outline: none;	
+	border: 2px solid #1976d2;	
+}
+
+.phr {
+	position: absolute;		
+	text-transform: uppercase;
+	color: #a5a5a5;
+	background: #fff;
+	padding: 0 2px;
+	animation: bottomText 0.5s ease;
+	left: 15px;
+	top: 13px;
+}
+
+input:focus ~ .phr {	
+	animation: topText 0.5s ease;
+	top: -4px;
+	left: 10px;
+	font-size: 8px;
+	color: #1976d2;
+}
+
+@keyframes topText {
+	from {
+		left: 15px;
+		top: 13px;
+	}
+	to {
+		top: -4px;
+		left: 10px;			
+	}
+}
+
+@keyframes bottomText {
+	from {
+		top: -4px;
+		left: 10px;			
+	}
+	to {
+		left: 15px;
+		top: 13px;		
+	}
+}
+
+/*анимированный sudebar*/
+.sidebar {
+	color: grey;
+	height: 100vh;
+	width: 300px;
+	background-color: #f0f0f0;
+	position: absolute;
+	top: 0;
+	left: -300px;	
+	animation: close 1s ease;
+}
+
+.xx {
+	text-align: right;
+	padding-right: 10px;
+}
+
+.item {
+	font-size: 30px;
+	border-bottom: 1px solid #b1b1b1;
+	margin-top: 20px;
+	text-indent: 30px;
+}
+
+.btns {
+	display: flex;
+	justify-content: space-between;	
+	height: 40px;
+	margin: 0 30px;
+	align-items: center;
+	font-size: 30px;
+	color: orange;	
+}
+
+.btn:checked ~ .sidebar {
+	animation: open 1s ease;
+	left: 0;
+}
+
+.b {
+	display: none;
+}
+
+@keyframes open {
+	from {
+		left: -300px; 
+	}
+	to {
+		left: 0;
+	}
+}
+
+@keyframes close {
+	from {
+		left: 0;
+	}
+	to {
+		left: -300px; 
+	
+	}
+}
+
