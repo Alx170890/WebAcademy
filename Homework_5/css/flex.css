@@ -359,6 +359,7 @@ h1 {
 @media screen and (width: 375px) {
 	.container {
 		width: 100%;
+		padding-top: 70px;
 	}
 
 	.header {
@@ -399,8 +400,13 @@ h1 {
 		float: none;
 	}
 
+	.focus {
+		display: block;
+		flex-direction: column;
+	}
+
 	.focus_block {
-		width: 100%;
+		width: 90%;
 		margin: 0 auto;
 		margin-bottom: 20px;
 	}
@@ -414,7 +420,7 @@ h1 {
 	}
 
 	.Portfolio {
-		height: 2690px;
+		height: 3030px;
 	}
 
 	.row {
@@ -428,7 +434,13 @@ h1 {
 	}
 
 	.Our-blog {
-		height: 1760px;
+		height: 1750px;
+	}
+
+	.blog {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.blog h3 {
@@ -437,6 +449,7 @@ h1 {
 
 	.blog-2 .blog_item {
 		padding: 25px;
+		margin-top: 25px;
 	}
 
 	.blog-1 {	
