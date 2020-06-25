@@ -1,0 +1,25 @@
+body {
+	font-family: Alear, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+#forma {
+	width: 400px;
+	background: #f0f0f0;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	margin: 20px;	
+}
+
+.numb {
+	display: flex;
+	align-items: center;
+}
+
+.operation, .result {
+	margin: 20px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 10px 15px;
+}
