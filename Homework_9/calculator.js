@@ -25,6 +25,5 @@ function calculator(number1, number2, znak) {
         return 0;
     } else {
         return result;
-    }
-    
+    }    
 }
