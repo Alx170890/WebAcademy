@@ -1,31 +1,42 @@
 body {
-	font:20px #fff Aleal, sans-serif;
+	font-family: Aleal, sans-serif;
 	padding: 0;
-	margin: 0;
+	margin: 0;	
 }
-div {
-	width: 400px;
-	height: 600px;
+
+span {
+	color: red;
+}
+
+.calculator {
+	position: absolute;
+	left: 35vw;
+	top: 5vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 300px;
+	height: 500px;
 	background: #d4d4d4;
+	border-radius: 20px;
+	border-top: #e0e0e0 solid 2px;
+	border-left: #e0e0e0 solid 2px;
+	border-right: #c7c7c7 solid 2px;
+	border-bottom: #c7c7c7 solid 2px;
 }
 
 button {
-	/*color: #fff;*/
-	color: #00d0ff;
+	color: #fff;	
 	font-size: 20px;	
 	width: 50px;
 	height: 50px;
-	margin: 100px;
+	margin: 10px;
 	background: #d4d4d4;
 	border-radius: 10px;
 	border-top: #e0e0e0 solid 2px;
 	border-left: #e0e0e0 solid 2px;
 	border-right: #c7c7c7 solid 2px;
-	border-bottom: #c7c7c7 solid 2px;
-	/*border-top: #00caea solid 2px;
-    border-left: #00caea solid 2px;
-    border-right: #009ab3 solid 2px;
-    border-bottom: #009ab3 solid 2px;*/
+	border-bottom: #c7c7c7 solid 2px;	
 	box-shadow: 0 0 10px #868686;
 }
 
@@ -35,8 +46,24 @@ button:active {
 button:focus {
 	outline: none;
 }
-button:hover {
-	/*background: #ccc;*/
-	color: #fff;
-	/*color: #00d0ff;*/
+button:hover, 
+button span:hover {	
+	color: #00d0ff;
 }	
+
+input {
+	width: 270px;
+	height: 100px;
+	border-radius: 10px;
+	border-top: #c7c7c7 solid 4px;
+	border-left: #c7c7c7 solid 4px;
+	border-right: #e0e0e0 solid 4px;
+	border-bottom: #e0e0e0 solid 4px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+
+input {
+	outline: none;
+}
