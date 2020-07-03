@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff;    
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+p,div,span,img {
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+}
+
+.weather {
+    background: url(../img/night.jpg) no-repeat center top;
+    color:#ffffff;    
+    height:800px;
+    width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 30px 0;    
+}
+
+.temp p {
+    font-size: 160px;
+
+}
+
+.temp span {
+    font-size: 40px;
+}
+
+.city input {
+    font-size: 36px;   
+    font-weight: 400; 
+    border: none;
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.wth {
+    font-size: 26px;
+    margin-bottom:40px;
+}
+
+img {
+    width: 190px;
+}
