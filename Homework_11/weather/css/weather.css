@@ -26,6 +26,7 @@ p,div,span,img {
     margin: 20px auto;
     text-align: center;
     box-shadow: 0 0 30px#212121;
+    position: relative;
 }
 
 .backgroungNight {
@@ -50,7 +51,7 @@ p,div,span,img {
     font-weight: 300;     
 }
 
-.cityWeather_city input {    
+input {    
     font-size: 36px;   
     font-weight: 400; 
     border: none;
@@ -59,6 +60,11 @@ p,div,span,img {
     color: #fff;
     text-transform: capitalize;
     width: 100%;
+}
+
+input:focus,
+button:focus {
+    outline: none;
 }
 
 button {
@@ -70,7 +76,26 @@ button {
     font-size: 20px;
 }
 
+button:hover {
+    color: springgreen;    
+}
+
 img {
     margin-top: 20px;   
     width: 170px;
 }
+
+.notify {  
+    box-sizing: border-box;
+    width: 100%;     
+    background:#8fddea;
+    color: #fff;
+    position: absolute;    
+    top: 198px;
+    padding: 16px;    
+  }
+  
+  /* .closeNotify { */
+    /* display: flex; */
+    /* justify-content: flex-end; */
+  /* } */
