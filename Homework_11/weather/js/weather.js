@@ -7,7 +7,7 @@ const getWeatherCityNow = (city) => (fetch(`https://community-open-weather-map.p
 	}
 })
 .then(response => (response.json()))
-.then((res) => {    
+.then((res) => {       
     return res;
 })
 .catch(err => {
@@ -16,11 +16,14 @@ const getWeatherCityNow = (city) => (fetch(`https://community-open-weather-map.p
 );
 
 // Переводим время в нужный формат
-function getCurrentTimeFromStamp(time) {
-    let date = new Date(time);  
-    let timeStampCon = `${date.getHours()}.${date.getMinutes()}`;  
-    return +timeStampCon;
+function getCurrentTimeFromStamp(timezone) {
+    let date = new Date();  
+    let timezoneHours = timezone / 3600;  
+    let timeStampCon = `${date.getHours()}.${date.getMinutes()}`;
+    let time = +timeStampCon + timezoneHours - 3;  
+    return time;
 }
+
 // Добавляем фокус на input
 document.querySelector("input").focus();
 
@@ -47,9 +50,8 @@ document.querySelector("button").addEventListener("click", () =>{
                 let wind = Math.round(res.wind.speed);  
                 let humidity = res.main.humidity;  
                 let weather = res.weather[0].main; 
-                let time = res.dt;
-                let normTime = getCurrentTimeFromStamp(time);
-                // console.log(normTime);                
+                let timezone = res.timezone;
+                let normTime = getCurrentTimeFromStamp(timezone);               
                 renderWeather(temperature, pressure, wind, humidity, weather, normTime);
             }                
         })
@@ -80,9 +82,8 @@ document.querySelector("input").addEventListener("keydown", event => {
                     let wind = Math.round(res.wind.speed);  
                     let humidity = res.main.humidity;  
                     let weather = res.weather[0].main; 
-                    let time = res.dt;
-                    let normTime = getCurrentTimeFromStamp(time);
-                    // console.log(normTime);                
+                    let timezone = res.timezone;
+                    let normTime = getCurrentTimeFromStamp(timezone);                       
                     renderWeather(temperature, pressure, wind, humidity, weather, normTime);
                 }                
             })
@@ -121,5 +122,8 @@ const renderWeather = (temp, press, wnd, hmdt, wthr, tm) =>  {
     if (tm > 20 || tm < 8) {         
         time.classList.add("backgroungNight");
         body.style.background = "#5c6576"
-    }        
+    } else {
+        time.classList.remove("backgroungNight");
+        body.style.background = "#75cad8"
+    }     
 };
